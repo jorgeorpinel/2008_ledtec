@@ -1,0 +1,316 @@
+.cake_debug{position:relative; z-index:100;}	/* Warnings de CakePHP */
+.cakeSqlLog{position:absolute;bottom:0;right:0;color:#e90;display:none;}	/* Log SQL de CakePHP */
+
+/* Header */
+
+* {font-family: "Century Gothic" arial; font-size: 10px; padding: 0; margin: 0;}
+a {color: #000;}
+a:link {text-decoration: none;}
+a:hover {color: #000; background: #a9bee3;}
+a:visited {color: #000; text-decoration: none;}
+
+html, body{min-width: 900px; height: 100%;}
+img {border: none; vertical-align: middle;}
+
+
+/* Elementos generales */
+
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+.scroll {overflow: auto;}
+.no_border {border: 0;}
+.red_border {border: 1px solid #ff0000;}
+.center {text-align: center;}
+.dbl_fnt {font-size: 200%;}
+.bold {font-weight: bold;}
+.selected {background: #a9bee3;}
+
+.error-message {
+	color: #600;
+	text-align: center;
+	background: #fee;
+	border: 1px solid #f00;
+	margin-bottom: 1em;
+}
+.accion_admin {
+	float: right;
+  filter: alpha(opacity=33.333); -moz-opacity: .33333; opacity: .33333;
+  cursor: pointer;
+}
+.accion_admin:hover {filter: alpha(opacity=100); -moz-opacity: 1; opacity: 1;}
+.admin_new {text-align: center; cursor: pointer;}
+.admin_new:hover {background: #fff;}
+
+
+/* Layout general (elementos fijos) */
+
+#aplicacion {
+  position: absolute; top: 0; left: 0;
+  min-width: 900px; width: 100%; min-height: 700px; height: 100%;
+	background: #666;
+}
+  #cabecera {
+    height: 110px;
+    background: url(/img/ledtec/header.jpg) center no-repeat;
+    border-bottom: 2px solid #333;
+  }
+  	#logo {
+			width: 400px; height: 110px;
+			float: right;
+  	}
+    #busqueda_rapida {width: 176px; padding-top: 35px; line-height: 100%;}
+    	#busqueda_rapida form {}
+				#busqueda_rapida form #boton_buscar {
+					width: 32px; height: 32px;
+					background: url('/img/ledtec/find.png') no-repeat !important; background-image: none;
+					filter: none !important; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/ledtec/find.png');
+				  cursor: pointer;
+				}
+				#busqueda_rapida form #barra_buscar {
+					width: 130px; height: 17px;
+					margin: 2px 0 0 6px;
+					background: url('/img/ledtec/busqueda.png') no-repeat !important; background-image: none;
+					filter: none !important; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/ledtec/busqueda.png');
+				}
+	      #busqueda_rapida form input {
+	        width: 114px; height: 20px;
+	        font-size: 15px; line-height: 20px;
+	        padding: 0 5px; margin: 0 8px;
+	        border: none; border-top: 1px solid #000; border-left: 1px solid #000;
+	      }
+	#live_chat {position: absolute; top: 20px; left: 220px;}
+  
+  #catalogo {
+    position: relative; top: 0; left: 0;
+    width: 100%; height: 420px;
+    margin-top: 22px;
+    background: #999;
+  }
+  	.loading {
+	  	position: absolute;
+	  	width: 100%;
+  		text-align: center;
+  		background: #fff;
+  		border-bottom: 1px solid #666;
+  	}
+  
+  #contacto {
+    width: 796px; height: 122px;
+    background: url('/img/ledtec/footer-up.png') no-repeat !important; background-image: none;
+		filter: none !important; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/ledtec/footer-up.png');
+		cursor: pointer;
+  }
+  #contacto:hover {
+  	background: url('/img/ledtec/footer-over.png') no-repeat !important; background-image: none;
+		filter: none !important; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/ledtec/footer-over.png');
+  }
+    #creditos {
+      max-height: 14px; height: 14px; overflow:auto;
+      margin-top: 94px; 
+      color: #fff; font-weight: bold; line-height: 14px;
+      text-align: center; text-transform: uppercase;
+    }
+  #ventana_contacto {
+  	position: absolute; top: 0; left: 0;
+  	width: 100%; height: 100%;
+  	background: #000;
+  	filter: alpha(opacity=66.666); -moz-opacity: .66666; opacity: .66666;
+  	z-index: 1;
+  }
+	 	#ventana_cargando {
+			position: absolute; top: 10%; left: 10%;
+	 		min-width: 400px; width: 80%; height: 100px;
+	 		padding: 8px;
+	  	background: url('/img/grad_bla_ver.png') repeat-x;
+	 	}
+ 	#div_cerrar {position: absolute; top: 10%; left: 10%; min-width: 610px; width: 80%; z-index: 3;}
+ 		#boton_cerrar {
+ 			float: right;
+ 			width: 26px;
+ 			height: 26px;
+ 			background: url('/img/iconos/close.gif') center no-repeat;
+ 			margin-right: -16px;
+ 			cursor: pointer;
+ 		}
+ 	#ventana_contenido {
+ 		color: #fff;
+ 		position: absolute; top: 10%; left: 10%;
+ 		min-width: 610px; width: 80%; min-height: 438px; height: 80%;
+ 		background: #ccc;
+		border: 8px solid #fff;
+ 		overflow: auto;
+  	z-index: 2;
+ 	}
+ 		#ventana_contenido * {font-size: 16px;}
+ 		.requerido {font-weight: bold;}
+ 		.campo {background: #7faddc; border-left: 1px solid #000; margin: 0 0 10px 30px;}
+	 		.campo label {
+	 			display: block; float: left;
+	 			width: 100px; height: 24px; line-height: 24px;
+				font-style: italic; text-align: right;
+	 			overflow: hidden;
+	 		}
+	 		.campo input, .campo textarea {
+	      width: 430px;
+	      padding: 2px; margin: 2px;
+	      border: none; border-top: 1px solid #000; border-left: 1px solid #000;
+	    }
+	 		.campo input {height: 20px; line-height: 20px;}
+	 		.campo textarea {height: 200px;}
+	 		.campo #enviar_mensaje {
+	 			float: right;
+	 			width: 118px; height: 121px;
+		  	background: url('/img/ledtec/enviar-up.png') no-repeat !important; background-image: none;
+				filter: none !important; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/ledtec/enviar-up.png');
+				border: none;
+				margin: 82px 15px 0 0;
+				cursor: pointer;
+	 		}
+	 		.campo #enviar_mensaje:hover {
+		  	background: url('/img/ledtec/enviar-down.png') no-repeat !important; background-image: none;
+				filter: none !important; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/ledtec/enviar-down.png');
+	 		}
+	  #sub_ventana {
+	  	color: #fff;
+	  }
+
+
+/* Catalogo: */
+
+.area {
+  position: absolute;
+  height: 100%;
+  background: #ccc;
+}
+  #categorias {width: 18%; padding: 1px 2px 1px 1px; overflow: auto;}
+  #categorias h1 {
+    color: #fff;
+    height: 29px;
+    font-size: 16px; font-weight: bold; white-space: nowrap; line-height: 29px;
+    text-transform: uppercase;
+    padding: 0 0.5em; margin-top: 1px;
+    /*overflow: hidden;*/
+    background: url(/img/ledtec/categoria-gris.png) repeat-x;
+    border: 2px solid #333;
+    cursor: pointer;
+  }
+  #categorias h1:hover {background: url(/img/ledtec/categoria-selec.png) repeat-x;}
+  #categorias h1.selected {background: url(/img/ledtec/categoria-selec.png) repeat-x;}
+  #categorias ul {
+    list-style-type: none;
+    font-style: italic;
+    margin: 2px 0 2px 10px;
+    border-left: 1px solid #000;
+  }
+    .subcategorias {padding: 2px 0 2px 0; margin: 0 1px; background: #dde3ed;}
+	    .subcategorias ul li .txt {padding: 0.3em 0 0.3em 0.5em; cursor: pointer;}
+	    .subcategorias ul li .txt:hover {background: #a9bee3;}
+	#categorias #titulo {
+		position: relative; top: -1px; left: -1px;
+	}
+  
+  #elementos {left: 19%; width: 26%;}
+  #elementos h1, #categorias #titulo {
+    color: #fff;
+    height: 38px;
+    font-size: 15px; font-weight: bold; font-style: italic; line-height: 38px;
+    text-align: center;
+    background: #a9bee3;
+    border-bottom: 1px solid #000;
+  }
+    .productos {height: 309px;}
+    .producto {
+      min-height: 57px; height: auto !important; height: 57px;
+      margin: 5px 0 5px 6px;
+    }
+      .producto_imagen {
+        position: relative !important; top: -4px; /*FF*/ position: static; /*IE6*/
+        width: 50px; height: 50px;
+        margin-right: 5px;
+        background: #fff;
+        border: 1px solid #000;
+        float: left;
+        cursor: pointer;
+      }
+      .producto_imagen:hover {border: 1px solid #a9bee3;}
+      .producto_descripcion {
+      	margin-top: 10px !important; /*FF*/ margin-top: 4px; /*IE6*/
+      	background: #dedede;
+      	cursor: pointer;
+      }
+    	.productos .selected .producto_descripcion {background: #a9bee3;}
+        .producto_descripcion p {min-height: 44px; height: auto !important; height: 44px;}
+      .producto_descripcion:hover {background: #a9bee3;}
+    .producto_barra {
+      margin: 0 5px;
+      height: 1px;
+      background: #000;
+      clear: both;
+    }
+    	.producto_linea {}
+    #productos_coneccion {
+      position: absolute; bottom: 0;
+      width: 96%;
+      text-align: center;
+      padding: 5px 2% 2% 5px;
+    }
+    	#img_connect {
+    		width: 32px; height: 32px;
+    		margin-bottom: 5px;
+	      background: url('/img/ledtec/connect.png') no-repeat !important; background-image: none;
+				filter: none !important; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/ledtec/connect.png');
+    	}
+      #productos_ver_mas {
+        color: #fff;
+        height: 23px;
+        font-size: 14px; font-weight: bold; white-space: nowrap; line-height: 23px;
+        text-align: center; text-transform: uppercase;
+        background: url(/img/ledtec/barra-mas-prod.png) repeat-x;
+        border: 1px solid #000;
+      }
+      #productos_ver_mas a {font-size: 14px; color: #fff; padding: 0 5px;}
+      #productos_ver_mas a:link {text-decoration: none;}
+      #productos_ver_mas a:hover {color: #000; background: #a9bee3;}
+      #productos_ver_mas a:visited {color: #fff; text-decoration: none;}
+  
+  #detalles {left: 46%; width: 53%;}
+    #imagen_anterior {position: absolute; top: 146px; left: 3px;}
+      #imagen_anterior button {
+        width: 29px; height: 44px;
+        background: url('/img/ledtec/foto-anterior-up.png') no-repeat !important; background-image: none;
+				filter: none !important; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/ledtec/foto-anterior-up.png');
+        border: none;
+        cursor: pointer;
+      }
+      #imagen_anterior button:hover {
+        background: url('/img/ledtec/foto-anterior.png') no-repeat !important; background-image: none;
+				filter: none !important; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/ledtec/foto-anterior.png');
+      }
+    #imagen_siguiente {position: absolute; top: 146px; right: 3px;}
+      #imagen_siguiente button {
+        width: 29px; height: 44px;
+        background: url('/img/ledtec/foto-siguiente-up.png') no-repeat !important; background-image: none;
+				filter: none !important; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/ledtec/foto-siguiente-up.png');
+        border: none;
+        cursor: pointer;
+      }
+      #imagen_siguiente button:hover {
+        background: url('/img/ledtec/foto-siguiente.png') no-repeat !important; background-image: none;
+				filter: none !important; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/ledtec/foto-siguiente.png');
+      }
+    #imagen_principal {height: 239px; margin: 5px 0 0 6px;}
+      #la_imagen {
+      	height: 234px;
+      	margin: 0 6px 5px 0;
+      	border: 1px solid #fff;
+      	background: #fff;
+      }
+    #informacion_principal {
+      height: 161px;
+      padding: 5px; margin: 0 6px 5px 6px;
+      overflow: auto;
+      background: #dedede;
+      border-left: 1px solid #000;
+    }
+      #informacion_principal p {font-size: 16px;}
