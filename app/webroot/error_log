@@ -1,3 +1,0 @@
-[04-Oct-2007 17:27:18] PHP Fatal error:  Class 'Cache' not found in /home/clubbons/cake/libs/view/templates/pages/home.ctp on line 44
-[04-Oct-2007 17:27:58] PHP Fatal error:  Class 'Cache' not found in /home/clubbons/cake/libs/view/templates/pages/home.ctp on line 44
-[14-Nov-2007 07:22:59] PHP Fatal error:  Call to undefined function  mime_content_type() in /home/clubbons/public_html/ledtec/app/views/productos/rss.ctp on line 20

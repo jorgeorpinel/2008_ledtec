@@ -3,26 +3,26 @@ function init() {
 	var catId = $('categoriaId').value;
 	var prodId = $('productoId').value;
 	var paginaActual = -1;
-	
+
 	ajaxLoad('categorias', '/categorias/'+catId, 'catsLoading');
 	ajaxLoad('elementos', '/productos/'+catId+'/'+prodId, 'prodsLoading');
 	ajaxLoad('detalles', '/producto/'+prodId, 'prodLoading');
-	
+
 	// TODO Preload hover images:
 	if (document.images)
 	{
-	  var footer_over_png = new Image(796, 122);	footer_over_png.src = '/img/layout/footer-over.png';
-	  var foto_anterior_png = new Image(29, 29);	foto_anterior_png.src = '/img/layout/foto-anterior.png';
-	  var foto_siguiente_png = new Image(29, 29);	foto_siguiente_png.src = '/img/layout/foto-siguiente.png';
+	  var footer_over_png = new Image(796, 122);	footer_over_png.src = '/img/ledtec/footer-over.png';
+	  var foto_anterior_png = new Image(29, 29);	foto_anterior_png.src = '/img/ledtec/foto-anterior.png';
+	  var foto_siguiente_png = new Image(29, 29);	foto_siguiente_png.src = '/img/ledtec/foto-siguiente.png';
 	  var grad_bla_ver_png = new Image(100, 100);	grad_bla_ver_png.src = '/img/grad_bla_ver.png';
 	  var loading_gif = new Image(123, 6);				loading_gif.src = '/img/loading.gif';
-	  var enviar_down_png = new Image(118, 121);	enviar_down_png.src = '/img/layout/enviar-down.png';
+	  var enviar_down_png = new Image(118, 121);	enviar_down_png.src = '/img/ledtec/enviar-down.png';
 	}
-	
+
 	// Imagenes del detalle de productos:
   var imagenesDelProducto = new Array();
   var imagenEnDetalles = 0;
-  
+
   // AddThis vars:
 	var addthis_url		= 'http://ledtec.com.mx';
 	var addthis_title	= 'LedTec (México)';
@@ -107,7 +107,7 @@ function editPhotos(prodToEditPh) {
 function loadProducts(nCatId, nombre) {
 	if (nombre) $('prodsLoading_nombre').innerHTML = nombre;
 	ajaxLoad('elementos', '/productos/'+nCatId, 'prodsLoading');
-	
+
 	$('categoria_'+catId).removeClassName('selected');
 	$('categoria_'+nCatId).addClassName('selected');
 	catId = nCatId;
@@ -119,7 +119,7 @@ function loadProducts(nCatId, nombre) {
 function loadProduct(nProdId, nombre) {
 	if (nombre) $('prodLoading_nombre').innerHTML = nombre;
 	ajaxLoad('detalles', '/producto/'+nProdId, 'prodLoading');
-	
+
 	$('prod_'+prodId).removeClassName('selected');
 	if ($('prod_'+nProdId)) $('prod_'+nProdId).addClassName('selected');
 	prodId = nProdId;
@@ -143,7 +143,7 @@ function prevImage() {
 	if (imagenEnDetalles < 1)
 		imagenEnDetalles = imagenesDelProducto.length - 1;
 	else imagenEnDetalles--;
-	
+
 	setImage();
 }
 
@@ -151,6 +151,6 @@ function nextImage() {
 	if (imagenEnDetalles > imagenesDelProducto.length-2)
 		imagenEnDetalles = 0;
 	else imagenEnDetalles++;
-	
+
 	setImage();
 }

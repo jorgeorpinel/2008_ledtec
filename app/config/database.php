@@ -52,7 +52,7 @@
  * where 'x' is the name of the database.
  *
  * persistent => true / false
- * Determines whether or not the database should use a persistent connection 
+ * Determines whether or not the database should use a persistent connection
  *
  * connect =>
  * ADOdb set the connect to one of these
@@ -74,9 +74,9 @@ class DATABASE_CONFIG {
 		'driver' => 'mysql',
 		'persistent' => false,
 		'host' => 'localhost',
-		'login' => 'clubbons_ledtec',
-		'password' => 'rorpinel',
-		'database' => 'clubbons_ledtec',
+		'login' => 'ledtec',
+		'password' => 'ledtec',
+		'database' => 'ledtec',
 		'prefix' => ''
 	);
 }

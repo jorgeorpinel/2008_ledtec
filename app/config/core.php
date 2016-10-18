@@ -54,7 +54,10 @@
  * In production mode, flash messages redirect after a time interval.
  * In development mode, you need to click the flash message to continue.
  */
-  define('DEBUG', 1);  // Sitio
+  // if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && $_SERVER["HTTP_X_REQUESTED_WITH"] == "XMLHttpRequest")
+  //   define('DEBUG', 1); // Ajax
+  // else define('DEBUG', 2); // Web app
+define('DEBUG', 0); // XXX Enable, fix
 /**
  * Turn off or enable cache checking application-wide.
  *
@@ -111,7 +114,7 @@
  * CakePHP session IDs are also regenerated between requests if
  * CAKE_SECURITY is set to 'high'.
  */
-	define('CAKE_SECURITY', 'medium');
+	define('CAKE_SECURITY', 'low');
 /**
  * Session time out time (in seconds).
  * Actual value depends on CAKE_SECURITY setting.
@@ -133,7 +136,7 @@
 	define('WEBSERVICES', 'off');
 /**
  * Compress CSS output by removing comments, whitespace, repeating tags, etc.
- * This requires a/var/cache directory to be writable by the web server for caching.
+ * This requires a /var/cache directory to be writable by the web server for caching.
  *
  * To use, prefix the CSS link URL with '/ccss/' instead of '/css/' or use Controller::cssTag().
  */
@@ -199,5 +202,12 @@
  * 		'dataField' => 'value',
  * 		'expiryField' => 'expires'));
  */
-	$cakeCache = array('File');
+	$cakeCache = array('File', array(
+		'dir' => "C:\\Users\\Alienware\\Archivo\\Projects\\2008 LedTec\\ledtec.com.mx\\app\\tmp\\",
+		// 'prefix' => 'cakecache_',
+		// 'lock' => true,
+	));
+	// http://cakephp.1045679.n5.nabble.com/cake-1-2-problem-with-cache-td1302563.html :
+	Configure::write('Cache.disable', true); // XXX Reenable
+
 ?>

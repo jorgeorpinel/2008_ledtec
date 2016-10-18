@@ -41,8 +41,7 @@
  */
 	if (!defined('CAKE_CORE_INCLUDE_PATH')) {
 		//define ('CAKE_CORE_INCLUDE_PATH', FULL PATH TO DIRECTORY WHERE CAKE CORE IS INSTALLED DO NOT ADD A TRAILING DIRECTORY SEPARATOR'; define('CAKE_CORE_INCLUDE_PATH', ROOT);
-//    define('CAKE_CORE_INCLUDE_PATH', "C:\www");
-    define('CAKE_CORE_INCLUDE_PATH', "/home/clubbons");  // Sitio
+		define('CAKE_CORE_INCLUDE_PATH', ROOT);
 	}
 	if (function_exists('ini_set')) {
 		ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . CAKE_CORE_INCLUDE_PATH . PATH_SEPARATOR . ROOT . DS . APP_DIR . DS);

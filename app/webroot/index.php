@@ -41,6 +41,7 @@
 		 //define('ROOT', 'FULL PATH TO DIRECTORY WHERE APP DIRECTORY IS LOCATED. DO NOT ADD A TRAILING DIRECTORY SEPARATOR');
 		 //You should also use the DS define to separate your directories
 		 define('ROOT', dirname(dirname(dirname(__FILE__))));
+		// define('ROOT', "C:\\Users\\Alienware\\Archivo\\Projects\\2008 LedTec\\ledtec.com.mx"); // http://cakephp.1045679.n5.nabble.com/cake-1-2-problem-with-cache-td1302563.html
 	}
 	if (!defined('APP_DIR')) {
 		 //define('APP_DIR', 'DIRECTORY NAME OF APPLICATION');
@@ -53,8 +54,7 @@
 	if (!defined('CAKE_CORE_INCLUDE_PATH')) {
 		 //define ('CAKE_CORE_INCLUDE_PATH', 'FULL PATH TO DIRECTORY WHERE CAKE CORE IS INSTALLED. DO NOT ADD A TRAILING DIRECTORY SEPARATOR');
 		 //You should also use the DS define to separate your directories define('CAKE_CORE_INCLUDE_PATH', ROOT);
-//     define('CAKE_CORE_INCLUDE_PATH', "C:\www");
-     define('CAKE_CORE_INCLUDE_PATH', "/home/clubbons");  // Sitio
+		define('CAKE_CORE_INCLUDE_PATH', ROOT);
 	}
 ///////////////////////////////
 //DO NOT EDIT BELOW THIS LINE//

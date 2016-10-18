@@ -42,8 +42,8 @@
 <div id="informacion_principal">
  	<div class="right" style="font-size: 200%;">unidad $<?php echo sprintf("%.2f",$producto['Producto']['precio_1']); ?></div>
  	En <?php foreach($producto['Categoria'] as $categoria) echo $html->link('<u>'.$categoria['nombre'].'</u>', '#', array('onclick'=>'loadProducts('.$categoria['id'].', "'.$categoria['nombre'].'"); return false;'), null, false).'|'; ?><br/>
- 	<b style="font-size: 150%;"><?php echo $producto['Producto']['nombre']; ?></b> <?php echo $producto['Producto']['clave']?'('.$producto['Producto']['clave'].')':null; ?> 
- 	
+ 	<b style="font-size: 150%;"><?php echo $producto['Producto']['nombre']; ?></b> <?php echo $producto['Producto']['clave']?'('.$producto['Producto']['clave'].')':null; ?>
+
  	<div class="clear"></div>
  	<div class="right" style="font-size:200%">1000u $<?php echo sprintf("%.2f",$producto['Producto']['precio_1000']); ?></div>
 <?php if($producto['Producto']['archivo_specs']) { ?>
