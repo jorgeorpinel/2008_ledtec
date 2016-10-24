@@ -54,10 +54,10 @@
  * In production mode, flash messages redirect after a time interval.
  * In development mode, you need to click the flash message to continue.
  */
+define('DEBUG', 0); // XXX Enable, fix
   // if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && $_SERVER["HTTP_X_REQUESTED_WITH"] == "XMLHttpRequest")
   //   define('DEBUG', 1); // Ajax
   // else define('DEBUG', 2); // Web app
-define('DEBUG', 0); // XXX Enable, fix
 /**
  * Turn off or enable cache checking application-wide.
  *

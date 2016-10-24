@@ -35,14 +35,7 @@ foreach ($productos as $producto) {
   } ?>
   <div id="prod_<?php echo $producto['id']; ?>" class="producto<?php if (isset($prodSelected) && $producto['id']===$prodSelected) echo ' selected'; ?>" onclick="loadProduct(<?php echo $producto['id']; ?>, '<?php echo $producto['nombre']; ?>');">
     <div id="la_imagen_<?php echo $producto['id']; ?>" class="producto_imagen"></div>
-		<?php
-			// TODO Figure out producto.imagen_principal
-			if( !isset($producto['imagen_principal']) )
-				$imagen_principal =  'default.png';
-			else
-				$imagen_principal = isset($producto['Imagen'][$imagen_principal]['archivo']) ? 'productos/'.$producto['Imagen'][$imagen_principal]['archivo'] : 'default.png';
-			echo $image->resize($imagen_principal, 50, 50, true, array('id'=>'el_archivo_'.$producto['id'], 'style'=>'display: none;'));
-		?>
+		<?php echo $image->resize('productos/'.$producto['Imagen'][$producto['imagen_principal']]['archivo'], 50, 50, true, array('id'=>'el_archivo_'.$producto['id'], 'style'=>'display: none;')); ?>
 		<script type="text/javascript">
 		  $('la_imagen_<?php echo $producto['id']; ?>').style.background = '#fff url('+$('el_archivo_<?php echo $producto['id']; ?>').src+') center no-repeat';
 		</script>
@@ -59,7 +52,7 @@ foreach ($productos as $producto) {
   if ((++$i)%$maxPaginas==0 || $i==$countProds) { $paginas++; ?>
 </div>
 
-<?php
+<?
   }
 } ?>
 

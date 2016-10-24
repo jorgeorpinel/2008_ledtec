@@ -44,8 +44,8 @@ foreach ($categorias as $categoria) { ?>
   		<?php echo $subcategoria['nombre']; ?>
   	</div>
   </li>
-<?php
+<?
   } ?>
 </ul></div>
-<?php
+<?
 } ?>

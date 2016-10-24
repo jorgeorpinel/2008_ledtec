@@ -38,41 +38,41 @@
  */
 class AppController extends Controller {
   var $helpers = array('Javascript', 'Html', 'Form', 'Image', 'Text');
-
+  
   function beforeFilter() {
     // Controla acceso a funciones por ajax:
     if (ereg('^ajax', $this->action) && !(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && $_SERVER["HTTP_X_REQUESTED_WITH"] == "XMLHttpRequest")) {
       $this->redirect('/');
       return;
     }
-
+    
     // Controla el acceso a funciones privadas administrativas:
     $soloAdmin = array(
       '/admin/',
       '/productos/ajaxEditarCat',
       '/productos/ajaxEditarFotos'
     );
-
+    
     foreach ($soloAdmin as $ruta)
       if (ereg('^'.$ruta, $this->here) && !$this->Session->check('adminId')) {
         $this->redirect('/');
         return;
       }
   }
-
+  
   function beforeRender() {
     // Ignora todo si ya se determinó un layout:
     if (in_array($this->layout, array('admin', 'ajax', 'xml', 'iframe'))) return;
-
+    
     if (ereg('^ajax', $this->action)) {
-      // Configure::write('debug', 1); // XXX Why this?
+      Configure::write('debug', 1);
       $this->layout = 'ajax';
     } else $this->layout = 'ledtec';
   }
-
-
+  
+  
   // Protegidas:
-
+  
   /**
    * Envia email con función mail() usando el rendering de cake.
    *
@@ -88,17 +88,17 @@ class AppController extends Controller {
 		$contenido = ob_get_contents();
 		ob_end_clean();
 		$this->layout = $layout;
-
+		
 		$headers = "MIME-Version: 1.0\r\n".
 		           "Content-type: text/html; charset=utf-8\r\n".
 		           "From: no-responder@ledtec.com.mx\r\n".
 		           "Reply-To: no-responder@ledtec.com.mx\r\n";
-
+		
 		if (mail($to, $titulo, $contenido, $headers))
 		  return $contenido;
 		else return false;
   }
-
+  
   /**
    * Limpia un texto para que sea seguro al utilizarse como html o SQL
    *
@@ -109,15 +109,15 @@ class AppController extends Controller {
   function _preparaTexto($texto, $para=null) {
     uses('sanitize');
     $limpiador = new Sanitize();
-
+    
     // Limpia XSS:
     if ($para === 'sql') $texto = $limpiador->escape($texto);
     elseif ($para === 'html') $texto = $limpiador->html($texto);
     else $texto = $limpiador->paranoid($texto);
-
+    
     return trim($limpiador->stripWhitespace($texto));  // Quita espacios inútiles
   }
-
+  
   /** Sube archivo al servidor:
    *
    * @param unknown_type $archivo
@@ -125,11 +125,11 @@ class AppController extends Controller {
    * @param unknown_type $validMimeTypes
    * @return unknown
    */
-  function _subeArchivo($archivo, $destino, $validMimeTypes = null) {
+  function _subeArchivo($archivo, $destino, $validMimeTypes = null) {    
     // Maneja errores de la subida del archivo:
     $uploadError = $this->__errorDeSubida($archivo['error']);
     if ($uploadError['error']) return $uploadError;
-
+    
     // Verifica el tipo de archivo:
     if ($validMimeTypes == 'imagenes')
 		  $validMimeTypes = array(
@@ -145,11 +145,11 @@ class AppController extends Controller {
     if (!empty($validMimeTypes))
       if(!in_array(strtolower($archivo['type']), $validMimeTypes))
         return array('error'=>true, 'mensage'=>'El tipo de archivo no es aceptable.');
-
+    
     // Genera el nuevo nombre de archivo:
     $extension = explode('.', $archivo['name']);
     $archivoNuevo  = md5(microtime()).".".(isset($extension[1])?$extension[1]:$extension[0]);
-
+    
     // Mueve el archivo:
     if (!move_uploaded_file($archivo['tmp_name'], $destino.$archivoNuevo))
       return array('error'=>true, 'mensage'=>'No se pudo subir el archivo. Por favor reintenta.');
@@ -182,7 +182,7 @@ class AppController extends Controller {
       break;
     }
   }
-
-
+  
+  
 }
 ?>
