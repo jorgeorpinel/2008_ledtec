@@ -16,7 +16,7 @@ function init() {
 	  var foto_siguiente_png = new Image(29, 29);	foto_siguiente_png.src = '/img/ledtec/foto-siguiente.png';
 	  var grad_bla_ver_png = new Image(100, 100);	grad_bla_ver_png.src = '/img/grad_bla_ver.png';
 	  var loading_gif = new Image(123, 6);				loading_gif.src = '/img/loading.gif';
-	  var enviar_down_png = new Image(118, 121);	enviar_down_png.src = '/img/layout/enviar-down.png';
+	  var enviar_down_png = new Image(118, 121);	enviar_down_png.src = '/img/ledtec/enviar-down.png';
 	}
 
 	// Imagenes del detalle de productos:
