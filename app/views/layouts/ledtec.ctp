@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="<?php echo $this->webroot.'favicon.ico'; ?>" type="image/x-icon" />
   <?php echo $html->css('ledtec'); ?>
   <?php echo $javascript->link('lib/prototype'); ?>
-  <?php echo $javascript->link('src/scriptaculous.js?load=effects'); ?>
+  <?php // echo $javascript->link('src/scriptaculous.js?load=effects'); // XXX Are we really using this? ?>
   <?php echo $javascript->link('ledtec'); ?>
   <?php echo $javascript->link('http://s9.addthis.com/js/widget.php?v=10'); ?>
   <!-- <script src="http://web.chat4support.com/Weboperator/Operator/banner.aspx?sid=1790&sTag=LEDTEC&style=1&online=1&nFloat=1&nInvite=1&nMode=0&nPos=4"></script> -->
