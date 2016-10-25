@@ -6,7 +6,8 @@ This is a CakePHP web application.
 © 2008 Jorge Orpinel  
 **Version 1.0.1**  
 Online catalog system for LED manufacturer.
-Single-page, semi responsive web application -- back when these concepts didn't exist in mainstream:
+Single-page, semi responsive web application  
+(back when these concepts didn't exist in mainstream)
 
 ## Requires
 

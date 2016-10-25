@@ -46,6 +46,12 @@
 
   <div id="cabecera">
 
+    <div style="position:absolute; top:50px; left:200px;">
+      This is a <b>demo</b>.
+      Project code can be seen in
+      <b><a href="https://github.com/jorgeorpinel/2008_ledtec">this GirHub repo</a></b>
+    </div>
+
     <div id="logo">
       <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="400" height="110" id="prueba" align="middle">
         <param name="allowScriptAccess" value="sameDomain" />
