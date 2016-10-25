@@ -66,7 +66,7 @@ class AppController extends Controller {
 
     if (ereg('^ajax', $this->action)) {
       // Configure::write('debug', 1); // XXX Why this?
-      $this->layout = 'ajax';
+       $this->layout = 'ajax';
     } else $this->layout = 'ledtec';
   }
 

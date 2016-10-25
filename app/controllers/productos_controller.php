@@ -122,7 +122,7 @@ class ProductosController extends AppController
     $productos = $this->Producto->Categoria->allProducts($categoriaId);
 
     $this->set('productos', $productos);
-    $this->set('prodSelected', $productoId?$productoId:$_SESSION['Prod']['id']); // XXX Undefined index: Prod
+    $this->set('prodSelected', $productoId?$productoId:$_SESSION['Prod']['id']);
 
     // RSS:
     if ($this->layout === 'xml') $this->render('rss');

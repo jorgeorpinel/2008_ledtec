@@ -1,5 +1,14 @@
 <IfModule mod_rewrite.c>
   RewriteEngine  on
+
+#  # Automatic Google translation:
+#  RewriteRule ^(.*)-en$ http://www.google.com/translate_c?hl=en&sl=es&u=http://ledtec.com/$1 [r,nc]
+#  RewriteRule ^(.*)-fr$ http://www.google.com/translate_c?hl=fr&sl=es&u=http://ledtec.com/$1 [r,nc]
+#  RewriteRule ^(.*)-de$ http://www.google.com/translate_c?hl=de&sl=es&u=http://ledtec.com/$1 [r,nc]
+#  RewriteRule ^(.*)-it$ http://www.google.com/translate_c?hl=it&sl=es&u=http://ledtec.com/$1 [r,nc]
+#  RewriteRule ^(.*)-pt$ http://www.google.com/translate_c?hl=pt&sl=es&u=http://ledtec.com/$1 [r,nc]
+
+  # CakePHP:
   RewriteRule    ^$ app/webroot/     [L]
   RewriteRule    (.*) app/webroot/$1 [L]
 </IfModule>

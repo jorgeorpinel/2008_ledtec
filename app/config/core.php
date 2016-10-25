@@ -54,10 +54,7 @@
  * In production mode, flash messages redirect after a time interval.
  * In development mode, you need to click the flash message to continue.
  */
-  // if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && $_SERVER["HTTP_X_REQUESTED_WITH"] == "XMLHttpRequest")
-  //   define('DEBUG', 1); // Ajax
-  // else define('DEBUG', 2); // Web app
-define('DEBUG', 0); // XXX Enable, fix
+define('DEBUG', 1);
 /**
  * Turn off or enable cache checking application-wide.
  *
@@ -202,11 +199,11 @@ define('DEBUG', 0); // XXX Enable, fix
  * 		'dataField' => 'value',
  * 		'expiryField' => 'expires'));
  */
-	$cakeCache = array('File', array(
-		'dir' => "C:\\Users\\Alienware\\Archivo\\Projects\\2008 LedTec\\ledtec.com.mx\\app\\tmp\\",
-		// 'prefix' => 'cakecache_',
-		// 'lock' => true,
-	));
+	// $cakeCache = array('File', array(
+	// 	'dir' => "C:\\Users\\Alienware\\Archivo\\Projects\\2008 LedTec\\ledtec.com.mx\\app\\tmp\\",
+	// 	// 'prefix' => 'cakecache_',
+	// 	// 'lock' => true,
+	// ));
 	// http://cakephp.1045679.n5.nabble.com/cake-1-2-problem-with-cache-td1302563.html :
 	Configure::write('Cache.disable', true); // XXX Reenable
 
