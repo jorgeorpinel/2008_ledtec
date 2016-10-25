@@ -19,7 +19,7 @@ Single-page, semi responsive web application -- back when these concepts didn't 
 
 ## Installation
 
-Populate the database with a dump (in parent directory) and configure connection in [database.php](app/config/database.php).
+Populate the database with a dump (in `sql/`) and configure connection in [database.php](app/config/database.php).
 Configure web server to serve `app/webroot`; Make sure `tmp/` dir is writeable by the web server.
 
 ## Config
